@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>AmericaFineDesign</title><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbeee9;--card:#fffaf7;--ink:#2b2426;--mute:#7a6a6a;--gold:#b8893e;--line:#ecd3c9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1f21;--card:#372a2d;--ink:#f8e9e4;--mute:#c9b3ad;--line:#57443f}}
+:root[data-theme="dark"]{--bg:#2a1f21;--card:#372a2d;--ink:#f8e9e4;--mute:#c9b3ad;--line:#57443f}
+*{box-sizing:border-box;margin:0}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;line-height:1.55}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+body{display:flex;justify-content:center;padding:16px}
+.card{width:100%;max-width:440px;background:var(--card);border-radius:28px;border:1px solid var(--line);overflow:hidden}
+.top{height:120px;background:linear-gradient(135deg,#f3c4bd,#e9b7a4 55%,#d5a45c);display:flex;justify-content:flex-end;padding:14px}
+.share{height:40px;border:0;border-radius:20px;padding:0 16px;background:rgba(255,250,247,.92);color:#2b2426;font:500 14px Jost,sans-serif;display:flex;align-items:center;gap:8px;cursor:pointer}
+.body{padding:0 24px 30px;text-align:center}
+.avatar{width:132px;height:132px;border-radius:50%;border:4px solid var(--card);box-shadow:0 0 0 2px var(--gold);margin:-66px auto 14px;display:block;object-fit:cover}
+h1{font:600 27px/1.1 'Cormorant Garamond',serif;letter-spacing:.06em}
+.tag{font:500 18px 'Cormorant Garamond',serif;color:var(--gold);margin:8px 0 18px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.desc{color:var(--mute);font-size:15px;max-width:34ch;margin:0 auto}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0 0}
+h2{font:600 23px 'Cormorant Garamond',serif;margin:26px 0 14px}
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.of{border:1px solid var(--line);border-radius:16px;padding:14px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:15px}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;border-radius:26px;border:0;font:500 16px Jost,sans-serif;text-decoration:none;cursor:pointer;color:#fff;background:linear-gradient(135deg,#c99a4b,#a87731)}
+.wabtn{width:68px;height:68px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;margin:0 auto;text-decoration:none}
+.wabtn svg{width:38px;height:38px}
+.soc{display:flex;justify-content:center;gap:14px}
+.soc a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;text-decoration:none}
+.fb{background:#1877f2}.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+.tt{background:#000;filter:drop-shadow(-2px -2px 0 #25f4ee) drop-shadow(2px 2px 0 #fe2c55)}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:#2b2426;color:#fff;padding:10px 18px;border-radius:20px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}.toast.on{opacity:1}
+
+body{background:radial-gradient(ellipse at 95% 0%,#f3bfbd 0,transparent 42%),radial-gradient(ellipse at 0% 100%,#f1b9b6 0,transparent 40%),radial-gradient(ellipse at 20% 15%,rgba(255,255,255,.85),transparent 40%),linear-gradient(160deg,#fdf1ec,#f8e0d9 55%,#fbe9e3);background-attachment:fixed;min-height:100vh}
+:root[data-theme="dark"] body{background:radial-gradient(ellipse at 95% 0%,#5a343a 0,transparent 45%),#2a1f21}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body{background:radial-gradient(ellipse at 95% 0%,#5a343a 0,transparent 45%),#2a1f21}}
+.card{box-shadow:0 0 0 1px #e6c98f,0 18px 50px rgba(200,140,140,.28)}
+h1.brand{font:500 clamp(19px,6vw,25px)/1.25 Cinzel,'Cormorant Garamond',serif;letter-spacing:.07em;white-space:nowrap}
+.brand small{font-size:.78em}.brand em{font-style:normal;color:#d08f97}
+.desc+.wabtn{margin-top:14px}
+.foot{margin-top:28px;font-size:12px;letter-spacing:.08em;color:var(--mute)}
+
+body{background:radial-gradient(ellipse at 90% 0%,#f7d2c4 0,transparent 40%),radial-gradient(ellipse at 5% 100%,#d98f92 0,transparent 45%),linear-gradient(160deg,#f0bdb8,#e3a3a3 55%,#ecb2ae);background-attachment:fixed;min-height:100vh}
+.card{--mute:#654f4f;background:radial-gradient(ellipse at 80% 0%,rgba(255,255,255,.55),transparent 45%),linear-gradient(180deg,#fde9e3 0%,#f8d6ce 55%,#f2c5bc 100%);box-shadow:0 0 0 2px #d9b46a,0 20px 55px rgba(120,50,60,.35)}
+.avatar{border-color:#fde9e3}
+.of{background:rgba(255,255,255,.6);border-color:#e3c48c}
+hr{border-top-color:#d9b46a}
+.soc a{box-shadow:0 2px 8px rgba(120,50,60,.25)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card{background:var(--card);--mute:#c9b3ad}:root:not([data-theme="light"]) .of{background:transparent}:root:not([data-theme="light"]) body{background:radial-gradient(ellipse at 95% 0%,#5a343a 0,transparent 45%),#2a1f21}}
+
+.top{height:132px;background:radial-gradient(circle at 85% 20%,rgba(255,235,200,.55),transparent 40%),linear-gradient(135deg,#c4586b 0%,#a94560 50%,#b8893e 100%)}
+.avatar{margin-top:-72px}
+h1.brand{margin-bottom:18px}
+.btn{background:linear-gradient(135deg,#c4586b,#a94560);box-shadow:0 0 0 1.5px #d9b46a inset,0 6px 16px rgba(150,50,80,.3);font:500 16px Jost,sans-serif}
+</style></head><body><main class="card">
+<div class="top"><button class="share" id="share" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>Compartir</button></div>
+<div class="body">
+<img class="avatar" src="images/logo.jpg" alt="Logo AmericaFineDesign">
+<h1 class="brand" aria-label="AmericaFineDesign">A<small>MERICA</small><em>F<small>INE</small></em>D<small>ESIGN</small></h1>
+
+<p class="desc">Joyería fina seleccionada en aleación de cobre inoxidable con recubrimiento en oro y rodio, acentuada con deslumbrantes piedras de circonia. Diseños únicos hechos para brillar.</p>
+<hr>
+<h2>Te ofrecemos</h2>
+<div class="offers"><div class="of"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#b8893e" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="5" r="1.6"/><circle cx="8" cy="13" r="4.2"/><circle cx="8" cy="13" r="1.5"/><circle cx="17" cy="7.500" r="1.400"/><circle cx="17" cy="14.500" r="3.400"/><circle cx="17" cy="14.500" r="1.200"/></svg><span>Argollas</span></div><div class="of"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#b8893e" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3.500c0 8 4 11.500 8 11.500s8-3.500 8-11.500"/><path d="M12 21.500l-3.200-3.200a1.900 1.900 0 0 1 3.200-2.200 1.900 1.900 0 0 1 3.200 2.200z"/></svg><span>Cadenas</span></div><div class="of"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#b8893e" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="12" r="1.7"/><circle cx="17.7" cy="17.7" r="1.7"/><circle cx="12" cy="20" r="1.7"/><circle cx="6.3" cy="17.7" r="1.7"/><circle cx="4" cy="12" r="1.7"/><circle cx="6.3" cy="6.3" r="1.7"/><circle cx="12" cy="4" r="1.7"/><circle cx="17.7" cy="6.3" r="1.7"/></svg><span>Pulseras</span></div><div class="of"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#b8893e" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v10.500c0 1.500-3 3-3.500 5-.4 2 1 3.500 3 3.500H18c1.700 0 2.500-1.200 2-2.500-.5-1.500-3-2-4.500-3.500L15 12.500V2"/><path d="M9 8c2 1.400 4 1.400 6 0"/><circle cx="12" cy="11" r=".9"/></svg><span>Tobilleras</span></div></div>
+<h2>Revisa nuestro catálogo</h2>
+<a class="btn" href="catalogo.html">Ver catálogo</a>
+<h2>Atención personalizada</h2><p class="desc">Escríbenos por medio de WhatsApp</p>
+<a class="wabtn" href="https://wa.me/50245020005?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20AmericaFineDesign." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.300 14c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.300 0 .5l-.3.500-.4.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.400.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.800.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></svg></a>
+<h2>Síguenos en nuestras redes sociales</h2>
+<div class="soc"><a class="fb" href="https://www.facebook.com/share/18QdjwqDtD/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.500c0-.7.200-1 1.200-1H17V2h-2.700C11.300 2 10 3.700 10 6.200V8H8v3.500h2V22h4V11.500h2.700L17 8z"/></svg></a>
+<a class="ig" href="https://www.instagram.com/americajewelry?stkn=MTN6eDJzdHZtYmFxOA%3D%3D&utm_source=qr&wa_status_inline=true" target="_blank" rel="noopener" aria-label="Instagram"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1" fill="currentColor"/></svg></a>
+<a class="tt" href="https://www.tiktok.com/@americajewelrymor?_r=1&_t=ZS-99qqrtUJQ3z" target="_blank" rel="noopener" aria-label="TikTok"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16.500 2h-3.200v13.300a2.800 2.800 0 1 1-2.800-2.800c.3 0 .6 0 .8.100V9.300a6 6 0 1 0 5.200 5.900V8.500A7 7 0 0 0 21 9.900V6.600a4.200 4.200 0 0 1-4.500-4.600z"/></svg></a></div>
+<p class="foot">America Fine Design Guatemala</p></div></main><div class="toast" id="t" role="status">Enlace copiado</div>
+<script>
+document.getElementById('share').onclick=function(){
+var u=location.href.split('#')[0];
+if(navigator.share){navigator.share({url:u}).catch(function(){});return}
+var t=document.getElementById('t');
+function ok(){t.classList.add('on');setTimeout(function(){t.classList.remove('on')},1800)}
+function fb(){var i=document.createElement('input');i.value=u;document.body.appendChild(i);i.select();try{document.execCommand('copy')}catch(e){}i.remove();ok()}
+try{navigator.clipboard.writeText(u).then(ok,fb)}catch(e){fb()}
+};
+</script></body></html>
